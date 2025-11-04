@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disbursement Voucher Packet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px 40px;
+      font-size: 13px;
+    }
+    h2, h3 {
+      text-align: center;
+      margin: 2px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    td, th {
+      border: 1px solid #000;
+      padding: 5px 6px;
+      vertical-align: top;
+    }
+    .checkbox-group label {
+      display: block;
+      margin-bottom: 4px;
+    }
+    .center { text-align: center; }
+    .bold { font-weight: bold; }
+    .right { text-align: right; }
+    .spacer { height: 20px; }
+    /* Section E styles */
+    .no-bottom-border { border-bottom: none; 
+    }
+    .section-a, 
+.section-a td {
+  border: 1px solid #000;   /* outer border visible */
+  border-collapse: collapse;
+}
+ /* Align Debit and Credit columns to the right */
+.accounting-entry td:nth-child(3),
+.accounting-entry td:nth-child(4),
+.accounting-entry th:nth-child(3),
+.accounting-entry th:nth-child(4) {
+  text-align: right;
+  padding-right: 8px;
+}
+   
+
+.section-a td + td,
+.section-a tr + tr td {
+  border: none; /* removes inner lines */
+}
+.section-a {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.section-a-label {
+  width: 5%;
+  border: 1px solid #000;
+  vertical-align: middle;
+}
+
+.section-a-content {
+  border: none;
+  padding-left: 10px;
+}
+
+</style> 
+<style> 
+@media print { 
+.buttons {
+ display: none;
+ }
+} 
+</style> 
+</head>>
+
+<body>
+  <!-- DV Form -->
+<!-- Header with logo and stylized text -->
+<div style="text-align: center; margin-bottom: 10px;">
+  <img src="logo.png" alt="DepEd Logo" 
+       style="width: 90px; height: 90px; display: block; margin: 0 auto 8px;">
+  <h3 style="font-family: 'Old English Text MT', 'Times New Roman', serif; 
+             font-size: 18px; margin: 0;">Republic of the Philippines</h3>
+  <h2 style="font-family: 'Old English Text MT', 'Times New Roman', serif; 
+             font-size: 22px; margin: 2px 0;">Department of Education</h2>
+  <h3 style="margin: 2px 0;">Region II – Cagayan Valley</h3>
+  <h3 style="margin: 2px 0;"><span contenteditable="true">Schools Division of Isabela</span></h3>
+</div>
+
+<!-- 🟩 DV Header Layout -->
+<table style="width:100%; border-collapse:collapse; border:1px solid #000; margin-bottom:8px;">
+  <tr>
+    <!-- Left: DISBURSEMENT VOUCHER -->
+    <td style="width:75%; text-align:center; font-weight:bold; font-size:18px; height:50px; vertical-align:middle;">
+      DISBURSEMENT&nbsp;&nbsp;VOUCHER
+    </td>
+
+    <!-- Right: Fund Cluster, Date, DV No. (no inner box) -->
+    <td style="width:25%; font-size:13px; vertical-align:top; padding:4px;">
+      <div><strong>Fund Cluster :</strong></div>
+      <div style="margin-top:8px;">Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<span contenteditable="true"> ____________</span></div>
+      <div style="margin-top:6px;">DV No.&nbsp;&nbsp;&nbsp;: ____________</div>
+    </td>
+  </tr>
+</table>
+
+<!-- 🟦 Next Table (Fund Cluster, Mode of Payment, etc.) -->
+<table style="width:100%; border-collapse:collapse; border:1px solid #000;">
+  <tr>
+    <td colspan="3">
+      <strong>Mode of Payment:</strong>
+      <label><input type="checkbox"> MDS Check</label>
+      <label><input type="checkbox"> Commercial Check</label>
+      <label><input type="checkbox"> ADA</label>
+      <label><input type="checkbox"> Others: ____________</label>
+    </td>
+  </tr>
+ <tr>
+  <td colspan="2" style="width:60%;"><strong>Payee:</strong> romulo</td>
+  <td style="width:40%;"><strong>TIN/Employee No.:</strong> 1124</td>
+</tr>
+  <tr><td colspan="3"><strong>ORS/BURS No.:</strong> ____________</td></tr>
+  <tr><td colspan="3"><strong>Address:</strong> ECHAGUE ISABELA</td></tr>
+</table>
+
+
+  <!-- DV Breakdown -->
+  <table>
+    <tr class="bold center">
+      <td>Particulars</td>
+      <td>Responsibility Center</td>
+      <td>MFO/PAP</td>
+      <td>Amount</td>
+    </tr>
+    <tr style="height: 150px;">
+      <td><span contenteditable="true">To payment of salary differential for step increase from the period of 2/5/2025 to 12/31/2025 in the amount of...</span></td>
+      <td></td>
+      <td></td>
+      <td>25,466.30</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="bold right">Amount Due</td>
+      <td class="bold">25,466.30</td>
+    </tr>
+  </table>
+
+  <!-- Section A -->
+<table style="width:100%; border-collapse:collapse; border:1px solid #000;">
+  <tr>
+    <td style="padding:6px;">
+      <span style="display:inline-block; border:1px solid #000; padding:2px 6px; margin-right:8px;">A.</span>
+      <br><br>
+      <div style="text-align:center;"><u><span contenteditable="true">SUSAN MARIE P. BARTOLOME, PhD</span></u></div>
+      <div style="text-align:center;">Administrative Officer V</div>
+    </td>
+  </tr>
+</table>
+
+
+  <!-- Section B: Accounting Entry -->
+  <div class="spacer"></div>
+<table class="accounting-entry">
+  <tr><td colspan="4" class="bold">B. Accounting Entry:</td></tr>
+
+    <tr class="bold center">
+      <td>Account Title</td>
+      <td>UACS Code</td>
+      <td>Debit</td>
+      <td>Credit</td>
+    </tr>
+    <tr><td>SALARIES AND WAGES</td><td>5010101000</td><td>32,454.55</td><td></td></tr>
+    <tr><td>RET. LIFE INSURANCE PREMIUM</td><td>5010301000</td><td>3,908.57</td><td></td></tr>
+    <tr><td>PHILHEALTH CONTRIBUTION</td><td>5010303000</td><td>811.36</td><td></td></tr>
+    <tr><td>DUE TO GSIS</td><td>2020102000</td><td></td><td>6,840.00</td></tr>
+    <tr><td>DUE TO BIR</td><td>2020101000</td><td></td><td>3,245.45</td></tr>
+    <tr><td>DUE TO PHILHEALTH</td><td>2020104000</td><td></td><td>1,622.73</td></tr>
+    <tr><td>CASH MDS. REG.</td><td>1010404000</td><td></td><td>25,466.30</td></tr>
+    <tr class="bold"><td>TOTAL</td><td></td><td>37,174.48</td><td>37,174.48</td></tr>
+  </table>
+
+  <!-- Section C & D -->
+  <div class="spacer"></div>
+  <table>
+    <tr>
+      <td  colspan="2" class="bold" style="width:50%; border:1px solid #000; font-weight:bold;">C. Certified:</td>
+      <td colspan="2" class="bold" style="width:50%; border:1px solid #000; font-weight:bold;">D. Approved for Payment:</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="bold" style="border:1px solid #000;">
+        <label><input type="checkbox"> Cash available</label><br>
+        <label><input type="checkbox"> Subject to Authority to Debit Account (when applicable)</label><br>
+        <label><input type="checkbox"> Supporting documents complete and amount claimed proper</label>
+      </td>
+      <td colspan="2" class="bold" style="border:1px solid #000;"></td>
+    </tr>
+    <tr><td>Signature:</td><td style="text-align:center;"> ___________________________</td><td>Signature:</td><td style="text-align:center;"> ___________________________</td></tr>
+    <tr><td>Printed Name: </td><td style="text-align:center;"> <span contenteditable="true">GERALDINE R. NONATO, CPA</span></td><td>Printed Name:</td><td style="text-align:center;"><span contenteditable="true"> RACHEL R. LLANA, PhD. CESO V</span></td></tr>
+    <tr><td>Position:</td><td style="text-align:center;"> Accountant III</td><td>Position:</td><td style="text-align:center;"> Schools Division Superintendent</td></tr>
+    <tr><td></td><td style="text-align:center;">Head, Accounting Unit / Authorized Representative</td><td></td><td style="text-align:center;">Agency Head / Authorized Representative</td></tr>
+    <tr><td>Date:</td><td style="text-align:center;"> <span contenteditable="true">____________</span></td>
+<td>Date:</td><td style="text-align:center;"> <span contenteditable="true">____________</span></td>
+</tr>
+  </table>
+
+  <!-- Section E: Receipt (replaced with your provided version) -->
+  <div class="spacer"></div>
+  <table>
+    <tr>
+      <td colspan="3" class="bold">E. Receipt of Payment</td>
+      <td class="bold no-bottom-border" style="width: 25%;">JEV No.: </td>
+    </tr>
+    <tr>
+      <td style="width: 30%;">Check/ ADA No.: ____________</td>
+      <td style="width: 20%;">Date: <span contenteditable="true">____________</span></td>
+
+      <td style="width: 30%;">Bank Name & Account Number:<br><span contenteditable="true">LBP# 12233</span></td>
+      <td style="width: 25%; border-top: none;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Signature: _____________________</td>
+      <td>Date: <span contenteditable="true">____________</span></td>
+      <td>Printed Name:<br><strong>jhune jaci</strong></td>
+      <td>Date: <span contenteditable="true">____________</span></td>
+    </tr>
+    <tr>
+      <td colspan="4">Official Receipt No. & Date/Other Documents: </td>
+    </tr>
+  </table>
+<div class="buttons" style="text-align:center; margin-top:20px;">
+  <button onclick="window.print()" style="padding:8px 16px; margin-right:10px; cursor:pointer;">🖨️ Print</button>
+  <button onclick="window.history.back()" style="padding:8px 16px; cursor:pointer;">⬅️ Back</button>
+</div>
+<script>
+// ✅ Check if data is ready — if not, go back to calculator
+if (localStorage.getItem("dv_ready") !== "true") {
+  alert("Please compute in the Salary Promotion Calculator first!");
+  window.location.href = "salary promotion.html"; // make sure filename matches
+}
+</script>
+<script>
+window.onload = function() {
+  // 🟦 Retrieve stored values from Salary Promotion Calculator
+  const name = localStorage.getItem("dv_name") || "";
+  const payee = localStorage.getItem("dv_name") || "";
+  const position = localStorage.getItem("dv_position") || "";
+  const address = localStorage.getItem("dv_address") || "";
+  const tin = localStorage.getItem("dv_tin") || "";
+  const account = localStorage.getItem("dv_account") || "";
+  const totalPS = parseFloat(localStorage.getItem("dv_total_ps")) || 0;
+  const gsis = parseFloat(localStorage.getItem("dv_gsis")) || 0;
+  const philhealthPS = parseFloat(localStorage.getItem("dv_philhealth_ps")) || 0;
+  const withholding = parseFloat(localStorage.getItem("dv_withholding")) || 0;
+  const ps9 = parseFloat(localStorage.getItem("dv_ps9")) || 0;
+
+  // 🪙 Helper function for formatting
+  const peso = (num) => "₱" + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  // 🟩 DUE TO GSIS = 9% PS + 12% GSIS
+  const dueToGSIS = ps9 + gsis;
+  const dueToBIR = withholding;
+  const dueToPhilhealth = philhealthPS * 2;
+
+  // 🟩 CASH MDS REG
+  const cashMDSReg = (totalPS + gsis + philhealthPS) - (dueToGSIS + dueToBIR + dueToPhilhealth);
+
+  // 🟩 Totals
+  const totalDebit = totalPS + gsis + philhealthPS;
+  const totalCredit = dueToGSIS + dueToBIR + dueToPhilhealth + cashMDSReg;
+
+  // 🟩 Replace values dynamically
+  document.body.innerHTML = document.body.innerHTML
+    .replace(/jhune jaci/g, name)
+    .replace(/romulo/g, payee)
+    .replace(/1124/g, tin)
+    .replace(/LBP# 12233/g, account)
+    .replace(/ECHAGUE ISABELA/g, address)
+    .replace(/25,466\.30/g, peso(cashMDSReg))
+    .replace(/32,454\.55/g, peso(totalPS))
+    .replace(/3,908\.57/g, peso(gsis))
+    .replace(/811\.36/g, peso(philhealthPS))
+    .replace(/6,840\.00/g, peso(dueToGSIS))
+    .replace(/3,245\.45/g, peso(dueToBIR))
+    .replace(/1,622\.73/g, peso(dueToPhilhealth))
+    .replace(/25,466\.30/g, peso(cashMDSReg))
+    .replace(/37,174\.48<\/td><td>37,174\.48/, `${peso(totalDebit)}</td><td>${peso(totalCredit)}`);
+};
+</script>
+
+</body>
+</html>

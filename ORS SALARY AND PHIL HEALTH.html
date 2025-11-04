@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OBLIGATION REQUEST AND STATUS</title>
+<style>
+  body {
+    font-family: "Times New Roman", serif;
+    font-size: 12px;
+    margin: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+  }
+  td, th {
+    border: 1px solid #000;
+    padding: 4px 6px;
+    vertical-align: top;
+  }
+  .center { text-align: center; }
+  .right { text-align: right; }
+  .no-border { border: none !important; }
+  .title-row td {
+    border: 1px solid #000;
+    padding: 6px;
+  }
+  .title-left {
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .title-right {
+    font-size: 11px;
+    line-height: 1.4em;
+  }
+  .info td { height: 25px; }
+  .cert-section td {
+    vertical-align: top;
+    padding: 6px;
+  }
+  .sign-line {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    width: 100%;
+  }
+  .underline { text-decoration: underline; }
+  th {
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div style="text-align: center; margin-bottom: 10px;">
+  <img src="logo.png" alt="DepEd Logo" style="width: 90px; height: 90px; display: block; margin: 0 auto 8px;">
+  <p style="font-family: 'Old English Text MT', 'Times New Roman', serif; font-size: 18px; margin: 2px 0;">Republic of the Philippines</p>
+  <p style="font-family: 'Old English Text MT', 'Times New Roman', serif; font-size: 22px; margin: 2px 0;">Department of Education</p>
+  <p style="margin: 2px 0;">Region II – Cagayan Valley</p>
+  <p style="margin: 2px 0;"><b>Schools Division of Isabela</b></p>
+</div>
+
+<!-- HEADER & TITLE -->
+<table class="title-row">
+  <tr>
+    <td class="title-left">OBLIGATION REQUEST AND STATUS</td>
+    <td class="title-right">
+      Serial No.: ___________________<br>
+      Date: <span contenteditable="true">___________________</span><br>
+      Fund Cluster: ___________________
+    </td>
+  </tr>
+</table>
+
+<!-- PAYEE / OFFICE / ADDRESS -->
+<table class="info" id="infoTable">
+  <tr><td>Payee</td><td id="payeeName">ROMULO J. JACINTO JR</td></tr>
+  <tr><td>Office</td><td id="payeeOffice"></td></tr>
+  <tr><td>Address</td><td id="payeeAddress" contenteditable="true">Santiago City, Isabela</td></tr>
+</table>
+
+<!-- MAIN TABLE -->
+<table>
+  <tr class="center">
+    <th>Responsibility Center</th>
+    <th>Particulars</th>
+    <th>MFO/PAP</th>
+    <th>UACS Object</th>
+    <th>Amount</th>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td style="line-height: 1.6;" contenteditable="true">
+      To obligate remittance of GSIS CONTRIBUTION of employee <b id="empNameText">ROMULO J. JACINTO JR</b> in the amount
+    </td>
+    <td class="center" style="padding: 40px 0;">5010301000<br><br>5010303000</td>
+    <td></td>
+    <td class="right" style="padding-top: 40px; padding-bottom: 100px;">
+      <span id="amt1">3,908.57</span><br><br>
+      <span id="amt2">4,000.00</span>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="right" style="font-weight:bold;">Total</td>
+    <td id="orsTotalAmount" class="right" style="font-weight:bold;">0.00</td>
+  </tr>
+</table>
+
+<!-- CERTIFICATION SECTION -->
+<table class="cert-section">
+  <tr>
+    <td style="width:50%;">
+      <b>A.</b> <b>Certified:</b> Charges to appropriation/allotment are necessary, lawful and under my direct supervision and supporting documents valid, proper and legal.
+      <br><br>
+      <table class="no-border" style="width:100%;">
+        <tr>
+          <td class="no-border" style="width:20%;">Signature:</td>
+          <td class="no-border"><div class="sign-line"></div></td>
+        </tr>
+      </table>
+      <br>
+      <div class="center underline" contenteditable="true"><b>SUSAN MARIE P. BARTOLOME PhD</b></div>
+      <div class="center">Administrative Officer V</div>
+      <br>
+      <table class="no-border" style="width:100%;">
+        <tr>
+          <td class="no-border" style="width:10%;">Date:</td>
+          <td class="no-border"><div class="sign-line" contenteditable="true"></div></td>
+        </tr>
+      </table>
+    </td>
+
+    <td style="width:50%;">
+      <b>B.</b> <b>Certified:</b> Allotment available and obligated for the purpose/adjustment necessary as indicated above.
+      <br><br>
+      <table class="no-border" style="width:100%;">
+        <tr>
+          <td class="no-border" style="width:20%;">Signature:</td>
+          <td class="no-border"><div class="sign-line"></div></td>
+        </tr>
+      </table>
+      <br>
+      <div class="center underline" contenteditable="true"><b>RHODORA L. PASCUA</b></div>
+      <div class="center">
+        Budget Officer / Administrative Officer V<br>
+        Head, Budget Unit / Authorized Representative
+      </div>
+      <br>
+      <table class="no-border" style="width:100%;">
+        <tr>
+          <td class="no-border" style="width:10%;">Date:</td>
+          <td class="no-border"><div class="sign-line" contenteditable="true"></div></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- SECTION C: STATUS OF OBLIGATION -->
+<table style="margin-top:10px;">
+  <tr><th colspan="9" style="text-align:left; padding:4px;"><b>C.</b> STATUS OF OBLIGATION</th></tr>
+  <tr>
+    <th rowspan="2">Date</th>
+    <th rowspan="2">Particulars</th>
+    <th rowspan="2">ORS/JEV/Check/<br>ADA/TRA No.</th>
+    <th colspan="3">Amount</th>
+    <th colspan="2">Balance</th>
+  </tr>
+  <tr>
+    <th>Obligation<br>(a)</th>
+    <th>Payable<br>(b)</th>
+    <th>Payment<br>(c)</th>
+    <th>Not Yet Due<br>(a-b)</th>
+    <th>Due and<br>Demandable<br>(b+c)</th>
+  </tr>
+  <tr><td colspan="8" style="height:20px;"></td></tr>
+  <tr><td colspan="8" style="height:20px;"></td></tr>
+  <tr><td colspan="8" style="height:20px;"></td></tr>
+  <tr><td colspan="8" style="height:20px;"></td></tr>
+  <tr><td colspan="8" style="height:20px;"></td></tr>
+</table>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  // Basahin ang mga na-save na data mula localStorage
+  const name = localStorage.getItem("ors_name") || "ROMULO J. JACINTO JR";
+  const address = localStorage.getItem("ors_address") || "Santiago City, Isabela";
+  const gsis = parseFloat(localStorage.getItem("ors_gsis") || 0);
+  const phil = parseFloat(localStorage.getItem("ors_philhealth") || 0);
+
+  // Ipakita sa Payee table
+  document.getElementById("payeeName").textContent = name;
+  document.getElementById("payeeAddress").textContent = address;
+
+  // I-update din sa paragraph text (Particulars)
+  document.getElementById("empNameText").textContent = name;
+
+  // Ipakita ang mga amount
+  document.getElementById("amt1").textContent = gsis.toLocaleString(undefined, { minimumFractionDigits: 2 });
+  document.getElementById("amt2").textContent = phil.toLocaleString(undefined, { minimumFractionDigits: 2 });
+
+  // Compute total
+  const total = gsis + phil;
+  document.getElementById("orsTotalAmount").textContent =
+    total.toLocaleString(undefined, { minimumFractionDigits: 2 });
+});
+</script>
+
+</body>
+</html>
