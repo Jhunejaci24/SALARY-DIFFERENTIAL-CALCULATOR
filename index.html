@@ -520,21 +520,24 @@ function goORS() {
 <script>
 function goORSSalary() {
   // Kunin ang mga values sa Salary Computation page
-  const name = document.getElementById("name").value || "";
-  const address = document.getElementById("address").value || "";
-  const gsis = localStorage.getItem("dv_gsis") || "0";
-  const phil = localStorage.getItem("dv_philhealth_ps") || "0";
+  const name = document.getElementById("name")?.value || "";
+  const address = document.getElementById("address")?.value || "";
+
+  // Kunin ang mga halaga mula sa localStorage (na galing sa DV computation)
+  const totalPS = parseFloat(localStorage.getItem("dv_total_ps")) || 0;
+  const phil = parseFloat(localStorage.getItem("dv_philhealth_ps")) || 0;
 
   // I-save sa localStorage para mabasa ng ORS SALARY AND PHIL HEALTH.html
   localStorage.setItem("ors_name", name);
   localStorage.setItem("ors_address", address);
-  localStorage.setItem("ors_gsis", gsis);
+  localStorage.setItem("ors_totalPS", totalPS);
   localStorage.setItem("ors_philhealth", phil);
 
   // Redirect papunta sa ORS SALARY AND PHIL HEALTH.html
   window.location.href = "ORS SALARY AND PHIL HEALTH.html";
 }
 </script>
+
 <!-- Modern Footer Section -->
 <footer style="
     text-align:center; 

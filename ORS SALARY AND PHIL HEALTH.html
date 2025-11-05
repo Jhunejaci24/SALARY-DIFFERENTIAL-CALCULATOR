@@ -54,19 +54,15 @@
 </head>
 
 <body>
-  <!-- DV Form -->
-<!-- Header with logo and stylized text -->
-<div style="text-align: center; margin-bottom: 10px;">
-  <img src="images/logo.png" alt="DepEd Logo" 
-       style="width: 90px; height: 90px; display: block; margin: 0 auto 8px;">
-  <h3 style="font-family: 'Old English Text MT', 'Times New Roman', serif; 
-             font-size: 18px; margin: 0;">Republic of the Philippines</h3>
-  <h2 style="font-family: 'Old English Text MT', 'Times New Roman', serif; 
-             font-size: 22px; margin: 2px 0;">Department of Education</h2>
-  <h3 style="margin: 2px 0;">Region II – Cagayan Valley</h3>
-  <h3 style="margin: 2px 0;"><span contenteditable="true">Schools Division of Isabela</span></h3>
-</div>
 
+<!-- HEADER -->
+<div style="text-align: center; margin-bottom: 10px;">
+  <img src="logo.png" alt="DepEd Logo" style="width: 90px; height: 90px; display: block; margin: 0 auto 8px;">
+  <p style="font-family: 'Old English Text MT', 'Times New Roman', serif; font-size: 18px; margin: 2px 0;">Republic of the Philippines</p>
+  <p style="font-family: 'Old English Text MT', 'Times New Roman', serif; font-size: 22px; margin: 2px 0;">Department of Education</p>
+  <p style="margin: 2px 0;">Region II – Cagayan Valley</p>
+  <p style="margin: 2px 0;"><b>Schools Division of Isabela</b></p>
+</div>
 
 <!-- HEADER & TITLE -->
 <table class="title-row">
@@ -102,7 +98,7 @@
     <td style="line-height: 1.6;" contenteditable="true">
       To obligate remittance of GSIS CONTRIBUTION of employee <b id="empNameText">ROMULO J. JACINTO JR</b> in the amount
     </td>
-    <td class="center" style="padding: 40px 0;">5010301000<br><br>5010303000</td>
+    <td class="center" style="padding: 40px 0;">5010101000<br><br>5010303000</td>
     <td></td>
     <td class="right" style="padding-top: 40px; padding-bottom: 100px;">
       <span id="amt1">3,908.57</span><br><br>
@@ -183,20 +179,22 @@
     <th>Not Yet Due<br>(a-b)</th>
     <th>Due and<br>Demandable<br>(b+c)</th>
   </tr>
-  <tr><td colspan="8" style="height:20px;"></td></tr>
-  <tr><td colspan="8" style="height:20px;"></td></tr>
-  <tr><td colspan="8" style="height:20px;"></td></tr>
-  <tr><td colspan="8" style="height:20px;"></td></tr>
-  <tr><td colspan="8" style="height:20px;"></td></tr>
+    <!-- 6 blank rows -->
+  <tr><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td></tr>
+  <tr><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td></tr>
+  <tr><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td></tr>
+  <tr><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td></tr>
+  <tr><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td><td class="center">&nbsp;</td></tr>
 </table>
+
 
 <script>
 window.addEventListener("DOMContentLoaded", () => {
   // Basahin ang mga na-save na data mula localStorage
   const name = localStorage.getItem("ors_name") || "ROMULO J. JACINTO JR";
   const address = localStorage.getItem("ors_address") || "Santiago City, Isabela";
-  const gsis = parseFloat(localStorage.getItem("ors_gsis") || 0);
-  const phil = parseFloat(localStorage.getItem("ors_philhealth") || 0);
+  const totalPS = parseFloat(localStorage.getItem("ors_totalPS")) || 0;
+  const phil = parseFloat(localStorage.getItem("ors_philhealth")) || 0;
 
   // Ipakita sa Payee table
   document.getElementById("payeeName").textContent = name;
@@ -206,11 +204,11 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("empNameText").textContent = name;
 
   // Ipakita ang mga amount
-  document.getElementById("amt1").textContent = gsis.toLocaleString(undefined, { minimumFractionDigits: 2 });
+  document.getElementById("amt1").textContent = totalPS.toLocaleString(undefined, { minimumFractionDigits: 2 });
   document.getElementById("amt2").textContent = phil.toLocaleString(undefined, { minimumFractionDigits: 2 });
 
   // Compute total
-  const total = gsis + phil;
+  const total = totalPS + phil;
   document.getElementById("orsTotalAmount").textContent =
     total.toLocaleString(undefined, { minimumFractionDigits: 2 });
 });
